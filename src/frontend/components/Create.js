@@ -7,8 +7,6 @@ const ipfsClient = require('ipfs-http-client');
 
 const projectId = process.env.REACT_APP_PROJECT_KEY;
 const projectSecret = process.env.REACT_APP_PROJECT_KEY_SECRET;
-console.log(projectId)
-console.log(projectSecret)
 const auth = 'Basic ' + Buffer.from(projectId + ':' + projectSecret).toString('base64');
 
 const client = ipfsClient.create({
