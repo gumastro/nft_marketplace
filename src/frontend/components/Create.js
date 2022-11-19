@@ -30,7 +30,6 @@ const Create = ({ marketplace, nft }) => {
         if (typeof file !== 'undefined') {
             try {
                 const result = await client.add(file)
-                console.log(result)
                 setImage(`https://catto.infura-ipfs.io/ipfs/${result.path}`)
             } catch (error) {
                 console.log("IPFS image upload error: ", error)
